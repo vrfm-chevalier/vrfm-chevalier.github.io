@@ -95,6 +95,7 @@
   }
 
 </style>
+
 </head>
 
 <header class="sticky-top">
@@ -148,6 +149,8 @@
 </header>
 
 <body>
+<main>
+
 
 <section id="hero">
   <div class="container-fluid">
@@ -179,16 +182,76 @@
       </div>
 
       <!-- RIGHT-->
+      <style type="text/css" media="screen">
+        /* The overlay effect - lays on top of the book image */
+        .overlay {
+          position: absolute;
+          top: 0;
+          background: rgb(0, 0, 0);
+          background: rgba(0, 0, 0, 0.7); /* Black see-through */
+          color: #f1f1f1;
+          width: 100%;
+          transition: .5s ease;
+          opacity:0;
+          color: white;
+          text-align: center;
+        }
+        /* Mouse over the book, fade in the overlay */
+        .container:hover .overlay {
+          opacity: 1;
+        }
+        /* line item spacing */
+        li{
+          margin:12px 0;
+        }
+      </style> 
       <div class="col-xs-1 col-sm-1 col-md-4 col-lg-6">
         <div class="card border-0" >
-         
+          <!-- CARD BODY AND ROLLOVER OVERLAY -->
           <div class="card-body">
             <div class="text-center">
-              <img src="images/VRFM.jpg" alt="The VRFM Book">
-              <p class="card-text text-secondary">Includes FREE International Shipping</p>
-              <a href="#" class="stretched-link btn btn-lg btn-warning"><STRONG>Buy Now $85.00</STRONG></a>
+              <div class="container"> 
+                <img class="card-img" src="images/VRFM.jpg" alt="The VRFM Book">
+                <div class="overlay p-5">
+                  <ul class="list-unstyled">
+                    <li>ISBN: 978-0578630823</li>
+                    <li>Published: Summer 2020</li>
+                    <li>Size: 8.5" x 11" & 2.5lbs</li>
+                    <li>Pages: 275</li>
+                  </ul>
+                  <p style="font-size: 21px; color: orange;">★★★★★</p>
+                  <ul class="list-unstyled">
+                    <li>196 vintage models</li>
+                    <li>1,400+ distinct references</li>
+                    <li>Timelines, charts, tables</li>
+                    <li>Examples, photos, history</li>
+                    <li>Watchmakers, restorers, dealers</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
+          <!-- CARD FOOTER BIN BUTTON -->
+          <div class="card-footer bg-white border-0 text-center">
+            <button type="button" class="btn btn-warning btn-lg" id="checkout-button-price_1H4uATEsA8D4zzn6e6HXXsNV" role="link" type="button">
+              <svg class="mt-n1" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-bag-check" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M8 1a2.5 2.5 0 0 0-2.5 2.5V4h5v-.5A2.5 2.5 0 0 0 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V5H2z"/>
+              <path fill-rule="evenodd" d="M10.854 8.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+            </svg> Buy Now $85.00</button>
+            <div id="error-message-vrfm"></div>
+
+            <div class="small pt-3">
+              <p><svg class="mt-n1" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-truck" fill="currentColor" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/></svg> FREE INTERNATIONAL SHIPPING</P>
+
+              <p><svg class="mt-n1" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-hand-thumbs-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" d="M6.956 1.745C7.021.81 7.908.087 8.864.325l.261.066c.463.116.874.456 1.012.965.22.816.533 2.511.062 4.51a9.84 9.84 0 0 1 .443-.051c.713-.065 1.669-.072 2.516.21.518.173.994.681 1.2 1.273.184.532.16 1.162-.234 1.733.058.119.103.242.138.363.077.27.113.567.113.856 0 .289-.036.586-.113.856-.039.135-.09.273-.16.404.169.387.107.819-.003 1.148a3.163 3.163 0 0 1-.488.901c.054.152.076.312.076.465 0 .305-.089.625-.253.912C13.1 15.522 12.437 16 11.5 16v-1c.563 0 .901-.272 1.066-.56a.865.865 0 0 0 .121-.416c0-.12-.035-.165-.04-.17l-.354-.354.353-.354c.202-.201.407-.511.505-.804.104-.312.043-.441-.005-.488l-.353-.354.353-.354c.043-.042.105-.14.154-.315.048-.167.075-.37.075-.581 0-.211-.027-.414-.075-.581-.05-.174-.111-.273-.154-.315L12.793 9l.353-.354c.353-.352.373-.713.267-1.02-.122-.35-.396-.593-.571-.652-.653-.217-1.447-.224-2.11-.164a8.907 8.907 0 0 0-1.094.171l-.014.003-.003.001a.5.5 0 0 1-.595-.643 8.34 8.34 0 0 0 .145-4.726c-.03-.111-.128-.215-.288-.255l-.262-.065c-.306-.077-.642.156-.667.518-.075 1.082-.239 2.15-.482 2.85-.174.502-.603 1.268-1.238 1.977-.637.712-1.519 1.41-2.614 1.708-.394.108-.62.396-.62.65v4.002c0 .26.22.515.553.55 1.293.137 1.936.53 2.491.868l.04.025c.27.164.495.296.776.393.277.095.63.163 1.14.163h3.5v1H8c-.605 0-1.07-.081-1.466-.218a4.82 4.82 0 0 1-.97-.484l-.048-.03c-.504-.307-.999-.609-2.068-.722C2.682 14.464 2 13.846 2 13V9c0-.85.685-1.432 1.357-1.615.849-.232 1.574-.787 2.132-1.41.56-.627.914-1.28 1.039-1.639.199-.575.356-1.539.428-2.59z"/> </svg>  FREE REFUNDS GUARANTEE</p>
+
+              <p><svg class="mt-n1" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-credit-card" fill="currentColor" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"/> <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"/> </svg> TRUSTED SECURE PAYMENTS</p>
+            </div>
+
+          </div> 
+
+
+
         </div>
       </div>
 
@@ -197,9 +260,40 @@
 </section>
 
 
+
+
+</main>
+
+<!-- Stripe Card Processing -->
+<script src="https://js.stripe.com/v3/"></script>
+
+<!-- Stripe CTA Panel Button Handler -->
+<script type="text/javascript">
+  (function() {
+  var stripe = Stripe('pk_live_DMbRjGLXjFtrFbqCyzjinQcA00he9P2hTa');
+  var checkoutButton = document.getElementById('checkout-button-price_1H4uATEsA8D4zzn6e6HXXsNV');
+  checkoutButton.addEventListener('click', function () {
+      stripe.redirectToCheckout({
+      lineItems: [{price: 'price_1H4uATEsA8D4zzn6e6HXXsNV', quantity: 1}],
+      mode: 'payment',
+      successUrl: window.location.protocol + '//vrfg.io/vrfm-success',
+      cancelUrl: window.location.protocol + '//vrfg.io/',
+      shippingAddressCollection: {
+          allowedCountries: ["AC", "AE", "AF", "AG", "AI", "AL", "AM", "AO", "AQ", "AR", "AT", "AU", "AW", "AX", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BL", "BM", "BN", "BO", "BQ", "BR", "BS", "BT", "BV", "BW", "BY", "BZ", "CA", "CD", "CF", "CG", "CH", "CI", "CK", "CL", "CM", "CN", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "EH", "ER", "ES", "ET", "FI", "FJ", "FK", "FO", "FR", "GA", "GB", "GD", "GE", "GF", "GG", "GH", "GI", "GL", "GM", "GN", "GP", "GQ", "GR", "GS", "GT", "GU", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IM", "IN", "IO", "IQ", "IS", "IT", "JE", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KY", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "LY", "MA", "MC", "MD", "ME", "MF", "MG", "MK", "ML", "MM", "MN", "MO", "MQ", "MR", "MS", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NC", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NU", "NZ", "OM", "PA", "PE", "PF", "PG", "PH", "PK", "PL", "PM", "PN", "PR", "PS", "PT", "PY", "QA", "RE", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SH", "SI", "SJ", "SK", "SL", "SM", "SN", "SO", "SR", "SS", "ST", "SV", "SX", "SZ", "TA", "TC", "TD", "TF", "TG", "TH", "TJ", "TK", "TL", "TM", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VA", "VC", "VE", "VG", "VN", "VU", "WF", "WS", "XK", "YE", "YT", "ZA", "ZM", "ZW", "ZZ"]
+          }
+      })
+      .then(function (result) {
+      if (result.error) {
+          var displayError = document.getElementById('error-message-vrfm');
+          displayError.textContent = result.error.message;
+      }
+      });
+  });
+  })();
+</script>
 <!-- Bootstrap 4 & JQuery -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css"> 
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <!-- Crisp Chat -->
 <script type="text/javascript">window.CRISP_WEBSITE_ID="36d5ce61-e154-4a5c-8575-056dfdd5c8f3";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
@@ -211,4 +305,6 @@
   gtag('js', new Date());
   gtag('config', 'G-KHE7KV6NG3');
 </script>
+
 </body>
+</html>
