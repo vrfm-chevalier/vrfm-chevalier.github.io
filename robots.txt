@@ -1,0 +1,8 @@
+User-agent: *
+Sitemap: https://www.vrfm.io/sitemap.xml
+Disallow: /.vscode/
+Disallow: /.git/
+Disallow: /vrfm-success
+Disallow: /vrfm-success.html
+Disallow: /vrfm-success-wholesale.html
+Disallow: /vrfm-success-wholesale
