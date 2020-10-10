@@ -187,24 +187,6 @@
 
       <!-- RIGHT-->
       <style type="text/css" media="screen">
-        /* The overlay effect - lays on top of the book image */
-        .overlay {
-          position: absolute;
-          top: 0;
-          background: rgb(0, 0, 0);
-          background: rgba(0, 0, 0, 0.7); /* Black see-through */
-          color: #f1f1f1;
-          width: 100%;
-          transition: .75s ease;
-          opacity:0;
-          color: white;
-          text-align: center;
-        }
-        /* Mouse over the book, fade in the overlay */
-        .container:hover .overlay {
-          opacity: 1;
-        }
-        /* line item spacing */
         li{
           margin:12px 0;
         }
@@ -218,27 +200,7 @@
             <div class="text-center">
               <div class="container"> 
                 <img class="card-img" src="images/VRFM.jpg" alt="The VRFM Book">
-          <!--
-                <div class="overlay p-3">
-                  <ul class="list-unstyled">
-                    <li>ISBN: 978-0578630823</li>
-                    <li>Published: Summer 2020</li>
-                    <li>Size: 8.5" x 11" & 2.5lbs</li>
-                    <li>Pages: 275</li>
-                  </ul>
-                  <p style="font-size: 21px; color: orange;">★★★★★</p>
-                  <ul class="list-unstyled">
-                    <li>196 vintage models</li>
-                    <li>1,400+ distinct references</li>
-                    <li>Timelines, charts, tables</li>
-                    <li>Examples, photos, history</li>
-                    <li>Watchmakers, restorers, dealers</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        -->
+
           <!-- CARD FOOTER BIN BUTTON -->
           <div class="card-footer bg-white border-0 text-center">
 
@@ -369,11 +331,15 @@
 
     <div class="card border-0">  <!-- CARD IMG -->
 
-      <img loading="lazy" class="card-img" src="images/VRFM_1.webp" alt="IG User Testimonial">
+      <picture>
+        <source srcset="images/VRFM_1.webp" type="image/webp">
+        <source srcset="images/VRFM_1.jpg" type="image/jpeg">
+        <img loading="lazy" class="card-img-top" src="images/VRFM_1.jpg" alt="Card Banner"> 
+      </picture>
 
       <div class="card-img-overlay p-2">
         <blockquote class="text-center">
-          <h3 class="mark">Look Who Got One Today!</h3>
+          <h3 class="mark">Look Who Got One Today! -GJW @WatchTalk</h3>
         </blockquote>
       </div>
 
