@@ -155,10 +155,18 @@
       <div class="col-xs-1 col-sm-1 col-md-6 col-lg-6 p-5">
         <div class="card shadow-lg rounded bg-light border-0" >
 
-          <img loading="lazy" class="card-img-top" src="images/book_card_banner.webp"  alt="Card Banner">
+          <picture>
+            <source srcset="images/book_card_banner.webp" type="image/webp">
+            <source srcset="images/book_card_banner.jpg" type="image/jpeg">
+            <img loading="lazy" class="card-img-top" src="images/book_card_banner.jpg" alt="Card Banner"> 
+          </picture>
 
           <div class="text-center mt-n5">
-            <img loading="lazy" class="img-thumbnail rounded-circle border-warning" src="images/Author_Headshot_2.webp" alt="Colin A. White, Author">
+            <picture>
+              <source srcset="images/Author_Headshot_2.webp" type="image/webp">
+              <source srcset="images/Author_Headshot_2.jpeg" type="image/jpeg">
+              <img loading="lazy" class="img-thumbnail rounded-circle border-warning" src="images/Author_Headshot_2.jpeg" alt="Colin A. White, Author">
+            </picture>
           </div>
 
           <div class="card-body">
