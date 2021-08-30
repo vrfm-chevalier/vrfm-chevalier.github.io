@@ -1,5 +1,9 @@
 User-agent: *
 Sitemap: https://www.vrfm.io/sitemap.xml
+Disallow: /js
+Disallow: /css
+Disallow: /images
+Disallow: /img
 Disallow: /.vscode/
 Disallow: /.git/
 Disallow: /vrfm-success
