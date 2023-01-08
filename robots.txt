@@ -6,7 +6,3 @@ Disallow: /images
 Disallow: /img
 Disallow: /.vscode/
 Disallow: /.git/
-Disallow: /vrfm-success
-Disallow: /vrfm-success.html
-Disallow: /vrfm-success-wholesale.html
-Disallow: /vrfm-success-wholesale
